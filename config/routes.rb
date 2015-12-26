@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :oauth, only: [:index]
   get 'oauth/authenticate' => 'oauth#authenticate'
   get 'oauth/callback' => 'oauth#callback'
+  get 'oauth/disconnect' => 'oauth#disconnect'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
