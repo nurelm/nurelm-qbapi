@@ -1,4 +1,4 @@
-class OauthController < ActionController::Base
+class OauthController < ApplicationController
 
   def index
     @base_url = oauth_authenticate_url
