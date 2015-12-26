@@ -1,13 +1,37 @@
-Try this:<br />
-<!-- somewhere in your document include the Javascript -->
 <script type="text/javascript"
         src="https://appcenter.intuit.com/Content/IA/intuit.ipp.anywhere.js">
 </script>
 
-<!-- configure the Intuit object: 'grantUrl' is a URL in your application which kicks off the flow, see below -->
 <script>
   intuit.ipp.anywhere.setup({grantUrl: '<%= @base_url %>'});
 </script>
 
-<!-- this will display a button that the user clicks to start the flow -->
+<p>
+  This page will help you get the tokens you need to give FlowLink's QuickBooks Online Integration permission to access your account.
+</p>
+
+<p>
+  Here's what to expect:
+</p>
+
+<ol>
+  <li>
+    A pop-up will appear asking you to log into your QuickBooks account.
+  </li>
+    Once successfully logged in, if you have multiple companies, you'll be asked to select which you'd like to use with the integration.
+  <li>
+    You'll be asked to "Authorize Intuit to securely share your data with FlowLink QuickBooks Integration." Just click on the Authorize button.
+  </li>
+  <li>
+    You'll see something like "FlowLink QuickBooks Integration and QuickBooks are now connected!" followed by the 3 pieces of information that you'll need to enter into FlowLink when setting up the integration: Token, Secret, and Realm ID.
+  </li>
+  <li>
+    Once you're done, head on over to your <a href="flowlink.io">account</a>, pull up your QuickBooks integration's configuration screen, and enter the Token, Secret, and Realm ID you just got.
+  </li>
+</ol>
+
+<p>
+  When you're ready, just click on the button below to get started:
+</p>
+
 <ipp:connectToIntuit></ipp:connectToIntuit>
